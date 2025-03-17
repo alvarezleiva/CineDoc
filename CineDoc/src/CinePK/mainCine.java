@@ -3,8 +3,15 @@ package CinePK;
 public class mainCine {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+
+			Cine cine = new Cine();
+			cine.setButacasOcupadas(4);
+			cine.setPrecioEntrada(10);
+			cine.setTituloPelicula("Terror en el instituto");
+			
+			
+		}
 
 	}
 
-}

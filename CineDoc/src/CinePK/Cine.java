@@ -7,7 +7,10 @@ public class Cine {
 	protected double precioEntrada;
 
 	public Cine() {
-		super();
+		this.aforo = 100;
+		this.butacasOcupadas = 0;
+		this.precioEntrada = 5.00;
+		this.tituloPelicula = "Sin determinar";
 	}
 
 	public Cine(int aforo) {
@@ -53,5 +56,19 @@ public class Cine {
 	public void setPrecioEntrada(double precioEntrada) {
 		this.precioEntrada = precioEntrada;
 	}
+	
+	//creamos metodos
+	
+	public int butacasLibres() {
+		
+		return aforo - butacasOcupadas;
+	}
+	
+	public double porcentajeOcupacion() {
+		
+		return (butacasOcupadas*100)/aforo;
+	}
+	
+	
 
 }
