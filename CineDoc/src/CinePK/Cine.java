@@ -4,12 +4,12 @@ public class Cine {
 	protected int aforo;
 	protected int butacasOcupadas;
 	protected String tituloPelicula;
-	protected double precioEntrada;
+	protected int precioEntrada;
 
 	public Cine() {
 		this.aforo = 100;
 		this.butacasOcupadas = 0;
-		this.precioEntrada = 5.00;
+		this.precioEntrada = 5;
 		this.tituloPelicula = "Sin determinar";
 	}
 
@@ -18,7 +18,7 @@ public class Cine {
 		this.aforo = aforo;
 	}
 
-	public Cine(int aforo, String tituloPelicula, double precioEntrada) {
+	public Cine(int aforo, String tituloPelicula, int precioEntrada) {
 		super();
 		this.aforo = aforo;
 		this.tituloPelicula = tituloPelicula;
@@ -53,22 +53,28 @@ public class Cine {
 		return precioEntrada;
 	}
 
-	public void setPrecioEntrada(double precioEntrada) {
+	public void setPrecioEntrada(int precioEntrada) {
 		this.precioEntrada = precioEntrada;
 	}
-	
-	//creamos metodos
-	
+
+	// creamos metodos
+
 	public int butacasLibres() {
-		
+
 		return aforo - butacasOcupadas;
 	}
-	
+
 	public double porcentajeOcupacion() {
-		
-		return (butacasOcupadas*100)/aforo;
+
+		return (butacasOcupadas * 100) / aforo;
 	}
-	
-	
+
+	public int ingresosSala() {
+		return precioEntrada * butacasOcupadas;
+	}
+
+	public void vaciarSala() {
+		butacasOcupadas = 0;
+	}
 
 }
