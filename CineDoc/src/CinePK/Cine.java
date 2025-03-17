@@ -76,5 +76,12 @@ public class Cine {
 	public void vaciarSala() {
 		butacasOcupadas = 0;
 	}
-
+	
+	public void venderEntrada(){
+		butacasOcupadas = butacasOcupadas+1;
+		
+	}
+	public void devolverEntrada(){
+		butacasOcupadas = butacasOcupadas-1;
+		}
 }
